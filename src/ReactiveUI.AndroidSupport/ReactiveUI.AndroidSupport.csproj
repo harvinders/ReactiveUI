@@ -1,0 +1,25 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras">
+
+  <PropertyGroup>
+    <TargetFrameworks>MonoAndroid90</TargetFrameworks>
+    <PackageDescription>Provides ReactiveUI extensions for the Android Support Library</PackageDescription>
+    <PackageId>ReactiveUI.AndroidSupport</PackageId>
+    <LangVersion>latest</LangVersion>
+    <PackageTags>mvvm;reactiveui;rx;reactive extensions;observable;LINQ;events;frp;xamarin;android;forms;monodroid;monotouch;xamarin.android;net;</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable" Version="27.0.*" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.*" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.*" />
+    <PackageReference Include="Xamarin.Android.Support.v7.Preference" Version="27.0.*" />
+    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="27.0.*" />
+    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable" Version="27.0.*" />
+    <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\ReactiveUI\ReactiveUI.csproj" />
+  </ItemGroup>
+</Project>

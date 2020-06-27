@@ -1,0 +1,26 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras">
+  <PropertyGroup>
+    <TargetFrameworks>net471</TargetFrameworks>        
+    <Description>Winforms specific example of IntegrationTests</Description>
+    <PackageId>IntegrationTests.WinForms</PackageId>
+    <UseWindowsForms>true</UseWindowsForms>
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ReactiveUI.Events.Winforms" Version="*" />
+    <PackageReference Include="ReactiveUI.Winforms" Version="*" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\IntegrationTests.Shared\IntegrationTests.Shared.csproj" />  
+  </ItemGroup>
+</Project>

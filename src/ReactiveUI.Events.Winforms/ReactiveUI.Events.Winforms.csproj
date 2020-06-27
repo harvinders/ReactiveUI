@@ -1,0 +1,31 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras">
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.0;net461</TargetFrameworks>
+    <AssemblyName>ReactiveUI.Events.Winforms</AssemblyName>
+    <RootNamespace>ReactiveUI.Events</RootNamespace>
+    <PackageDescription> Provides Observable-based events API for Win Forms UI controls &amp;	event handlers</PackageDescription>
+    <PackageId>ReactiveUI.Events.Winforms</PackageId>
+    <UseWindowsForms>true</UseWindowsForms>
+    <NoWarn>$(NoWarn);CS1570;CA1812</NoWarn>
+  </PropertyGroup>  
+
+  <ItemGroup>
+    <Compile Remove="*.cs" />
+    <None Include="*.cs" />
+    <PackageReference Include="Pharmacist.Common" Version="1.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+      <PackageReference Include="System.Reactive" Version="4.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Events_Winforms.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('net4')) ">
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+</Project>
